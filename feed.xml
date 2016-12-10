@@ -30,8 +30,7 @@ layout: null
         <item>
           <title>{{ post.title | xml_escape }}</title>
           <description>{{ post.content | xml_escape }}</description>
-          <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-          <!--<pubDate>Thu, 08 Dec 2016 19:00:00 EST</pubDate>-->
+          <pubDate>{{ post.date }}</pubDate>
           <link>{{ post.url | prepend: site.url }}</link>
           <guid isPermaLink="false">{{ post.episode-id }}</guid>
 

@@ -3,10 +3,10 @@ layout: post
 title: "The Shoulds of Programming"
 summary: >
   We have a brief discussion on the Shoulds of Programming.
-date: Thu, 08 Dec 2016 17:30:00
+date: "Thu, 08 Dec 2016 17:30:00"
 categories: podcast
-episode-id: 20161208
-audio-duration: 0:03:49
+episode-id: "20161208"
+audio-duration: "3:49"
 audio-link: http://s3.amazonaws.com/haverhill-hackers/TheMadpixProject-LiquidBlue.mp3
 audio-size: 6214144
 ---
