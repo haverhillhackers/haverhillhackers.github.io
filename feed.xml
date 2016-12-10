@@ -33,7 +33,7 @@ layout: null
           <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
           <!--<pubDate>Thu, 08 Dec 2016 19:00:00 EST</pubDate>-->
           <link>{{ post.url | prepend: site.url }}</link>
-          <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+          <guid isPermaLink="false">{{ post.episode-id }}</guid>
 
           <itunes:summary>{{ post.summary | xml_escape }}</itunes:summary>
           <itunes:duration>{{ post.audio-duration }}</itunes:duration>
