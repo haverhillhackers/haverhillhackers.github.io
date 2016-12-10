@@ -30,7 +30,7 @@ layout: null
         <item>
           <title>{{ post.title | xml_escape }}</title>
           <description>{{ post.content | xml_escape }}</description>
-          <pubDate>{{ post.date }}</pubDate>
+          <pubDate>{{ post.episode-date }}</pubDate>
           <link>{{ post.url | prepend: site.url }}</link>
           <guid isPermaLink="false">{{ post.episode-id }}</guid>
 
