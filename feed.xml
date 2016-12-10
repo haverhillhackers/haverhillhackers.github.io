@@ -1,0 +1,45 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <language>en-us</language>
+    <title>Haverhill Hackers</title>
+    <description>Discussions on programming from the HaverhillHackers.</description>
+    <link>{{ site.url }}</link>
+    <copyright>&#xA9;2016-2017</copyright>
+    <webMaster>haverhillhackers@gmail.com (HaverhillHackers)</webMaster>
+    <managingEditor>haverhillhackers@gmail.com (HaverhillHackers)</managingEditor>
+    <itunes:owner>
+      <itunes:name>Haverhill Hackers</itunes:name>
+      <itunes:email>haverhillhackers@gmail.com</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Technology">
+      <itunes:category text="Software How-To" />
+    </itunes:category>
+    <itunes:keywords>programming,computer,science,algorithms,software</itunes:keywords>
+    <itunes:explicit>no</itunes:explicit>
+    <atom:link href="https://haverhillhackers.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <itunes:author>Haverhill Hackers</itunes:author>
+    <itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
+
+    {% for post in site.posts %}
+      {% unless post.draft %}
+        <item>
+          <title>{{ post.title | xml_escape }}</title>
+          <description>{{ post.content | xml_escape }}</description>
+          <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+          <!--<pubDate>Thu, 08 Dec 2016 19:00:00 EST</pubDate>-->
+          <link>{{ post.url | prepend: site.url }}</link>
+          <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+
+          <itunes:summary>{{ post.summary | xml_escape }}</itunes:summary>
+          <itunes:duration>{{ post.audio-duration }}</itunes:duration>
+          <enclosure url="{{ post.audio-link }}" length="{{ post.audio-size }}" type="audio/mpeg" />
+        </item>
+      {% endunless %}
+    {% endfor %}
+  </channel>
+</rss>
